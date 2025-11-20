@@ -1,0 +1,61 @@
+# ------------------------------------------------------------------------------------
+# Terraform State & Local Cache (never commit these)
+# ------------------------------------------------------------------------------------
+.terraform/
+terraform.tfstate
+terraform.tfstate.*
+crash.log
+crash.*.log
+
+# Terraform plan outputs (can contain sensitive info)
+*.tfplan
+*.tfvars
+*.tfvars.json
+
+# ------------------------------------------------------------------------------------
+# Azure CLI / Credentials / Secrets (never commit these)
+# ------------------------------------------------------------------------------------
+azurerm_provider.tf
+AzureRMProfile.json
+.azure/
+*.pem
+*.key
+*.azureprofile
+*.azcli
+*.pub
+
+# Service principal credentials
+*.sp
+*.env
+
+# Node / JS (if future API added)
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Python cache (if future backend added)
+__pycache__/
+*.pyc
+
+# ------------------------------------------------------------------------------------
+# OS / IDE / Editor junk
+# ------------------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+.history/
+
+# JetBrains
+.idea/
+
+# Logs
+*.log
+
+# ------------------------------------------------------------------------------------
+# Build artifacts (future CI/CD)
+# ------------------------------------------------------------------------------------
+dist/
+build/
